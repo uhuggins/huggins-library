@@ -1,5 +1,9 @@
 # The Huggins Library
 
+**Live:** https://huggins-library.vercel.app ·
+**Repo:** https://github.com/uhuggins/huggins-library
+(pushes to `main` deploy automatically)
+
 A home library catalogued from photographs. Five shelves were photographed spine by
 spine; the books were identified, tagged by genre and author, matched to cover art
 and publication records on Open Library, and laid out as a browsable site.
@@ -40,6 +44,15 @@ npm run build    # typecheck + production build
 
 ## Adding books
 
-Photograph the shelf, add entries to `src/data/books.ts` (id, title, author,
-genre, shelf number, spine colors), then run `npm run covers`. Everything else —
-shelves, filters, charts, and the constellation — derives from the catalog.
+Photograph a shelf, upload the photos to `photos/inbox/` (the site's "Add to
+the library" section links straight to GitHub's upload page, which works from
+a phone camera roll), then either:
+
+- run `claude "/add-books"` locally, which transcribes the spines, tags
+  genres, fetches covers, verifies the build, and archives the photos; or
+- add an `ANTHROPIC_API_KEY` repository secret once, and the
+  `Catalog new shelf photos` GitHub Action will have Claude Sonnet do the same
+  automatically on upload and open a pull request.
+
+Detailed model instructions live in `CLAUDE.md`,
+`.claude/skills/add-books/SKILL.md`, and `docs/BUILD-SPEC.md`.
