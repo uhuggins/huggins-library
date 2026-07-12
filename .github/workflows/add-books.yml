@@ -1,0 +1,49 @@
+# Optional automation: when new shelf photos land in photos/inbox/ (e.g. via
+# GitHub's mobile upload page), Claude Sonnet catalogs them and opens a PR.
+#
+# Requires one repository secret: ANTHROPIC_API_KEY
+# (Settings → Secrets and variables → Actions → New repository secret).
+# Without the secret this workflow simply fails early and can be ignored;
+# the same flow works locally with:  claude "/add-books"
+
+name: Catalog new shelf photos
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'photos/inbox/**'
+  workflow_dispatch:
+
+jobs:
+  add-books:
+    if: ${{ github.repository_owner == 'uhuggins' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - name: Run Claude on the inbox
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Run the /add-books skill on the photos in photos/inbox/. Follow the
+            skill exactly: transcribe only legible spines, flag uncertain ones,
+            run npm run covers and review its matches, run npm run build, and
+            archive the processed photos to photos/shelves/. Then create a
+            branch named add-books/<date>, commit the changes, push it, and
+            open a pull request to main summarizing what was added and what
+            was skipped. Do not push to main directly.
+          claude_args: '--model claude-sonnet-5'
