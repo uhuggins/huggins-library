@@ -4,8 +4,8 @@
 **Repo:** https://github.com/uhuggins/huggins-library
 (pushes to `main` deploy automatically)
 
-A home library catalogued from photographs. Five shelves were photographed spine by
-spine; the books were identified, tagged by genre and author, matched to cover art
+A home library catalogued from photographs. The shelves are photographed spine by
+spine; the books are identified, tagged by genre and author, matched to cover art
 and publication records on Open Library, and laid out as a browsable site.
 
 Design notes: dark "library at night" theme drawn from the actual bindings in the

@@ -60,19 +60,31 @@ export const stats = (() => {
     yearMin: Math.min(...years),
     yearMax: Math.max(...years),
     coversFound,
-    shelves: 5,
+    shelves: new Set(books.map((b) => b.shelf)).size,
   }
 })()
 
-export const ROMAN = ['I', 'II', 'III', 'IV', 'V'] as const
+export const ROMAN = [
+  'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV',
+] as const
 
 export const SHELF_CAPTIONS: Record<number, string> = {
   1: 'Dictionaries, physics, and Dover crime',
-  2: 'Verse, anglers, spies, and phrasebooks',
+  2: 'Michael Innes by the yard, Loebs, and phrasebooks',
   3: 'Byron, Chaucer, Yeats, and old cloth',
   4: 'Atlases, archaeology, and Inspector Morse',
   5: 'The astronomy shelf, lives, and Bengal',
+  6: 'The watercolour school and the Asterix run',
+  7: 'Joyce, Wilde, and a run of detectives',
+  8: "Startups at one end, St Clare's at the other",
+  9: 'Graphic novels, annuals, and Anne Carson',
+  10: 'Tufte, Heaney, and le Carré',
+  11: 'Thermal physics to the Phantom Tollbooth',
+  12: 'Tolkien, Feynman, and the field guides',
+  13: 'Sheet music and stray volumes',
 }
+
+export const shelfNumbers: number[] = [...new Set(books.map((b) => b.shelf))].sort((a, b) => a - b)
 
 export { books, peopleOf }
 export type { Book, Genre }

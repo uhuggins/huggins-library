@@ -79,7 +79,7 @@ function EraColumns() {
 
   const buckets: { key: string; label: string; count: number; titles: string[] }[] = []
   buckets.push({ key: 'pre', label: 'before 1800', count: 0, titles: [] })
-  for (let d = 1800; d <= 2010; d += 10) {
+  for (let d = 1800; d <= 2020; d += 10) {
     buckets.push({ key: String(d), label: `${d}s`, count: 0, titles: [] })
   }
   for (const b of books) {

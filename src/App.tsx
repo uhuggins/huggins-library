@@ -18,7 +18,6 @@ export default function App() {
 
   const pickGenreAndGo = (g: Genre) => {
     setGenre(g)
-    history.replaceState(null, '', `#collection?genre=${encodeURIComponent(g)}`)
     document.getElementById('collection')?.scrollIntoView()
   }
 
@@ -64,8 +63,9 @@ export default function App() {
             Library
           </h1>
           <p className="hero-sub">
-            Five shelves photographed and read spine by spine: {stats.books} volumes of golden-age crime, Irish
-            letters, astronomy, and the odd Bengali anthology, from {stats.yearMin} to {stats.yearMax}.
+            {stats.shelves} shelves photographed and read spine by spine: {stats.books} volumes of golden-age crime,
+            Irish letters, astronomy textbooks, watercolour manuals, Enid Blyton, and the odd Bengali anthology, from{' '}
+            {stats.yearMin} to {stats.yearMax}.
           </p>
         </header>
 

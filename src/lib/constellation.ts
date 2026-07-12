@@ -76,11 +76,22 @@ export function buildGraph(): { nodes: GraphNode[]; links: GraphLink[] } {
     }
   }
 
-  // Same writer, different books.
-  for (let i = 0; i < books.length; i++) {
-    for (let j = i + 1; j < books.length; j++) {
-      const shared = peopleOf(books[i]).some((p) => peopleOf(books[j]).includes(p))
-      if (shared) links.push({ source: books[i].id, target: books[j].id, kind: 'author' })
+  // Same writer, different books: chain each writer's books chronologically
+  // rather than linking every pair, so a prolific writer reads as a thread,
+  // not a solid disc of edges.
+  const byPerson = new Map<string, Book[]>()
+  for (const b of books) {
+    for (const p of peopleOf(b)) byPerson.set(p, [...(byPerson.get(p) ?? []), b])
+  }
+  const seenPair = new Set<string>()
+  for (const owned of byPerson.values()) {
+    if (owned.length < 2) continue
+    const chain = [...owned].sort((a, b) => (a.year ?? 3000) - (b.year ?? 3000) || a.id.localeCompare(b.id))
+    for (let i = 0; i < chain.length - 1; i++) {
+      const key = [chain[i].id, chain[i + 1].id].sort().join('|')
+      if (seenPair.has(key)) continue
+      seenPair.add(key)
+      links.push({ source: chain[i].id, target: chain[i + 1].id, kind: 'author' })
     }
   }
 

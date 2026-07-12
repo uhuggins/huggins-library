@@ -63,7 +63,7 @@ interface Book {
   year?: number         // first publication of the WORK
   genre: Genre          // exactly one
   tags?: string[]       // cross-genre threads: ireland, fishing, cambridge...
-  shelf: 1|2|3|4|5
+  shelf: number        // shelves are numbered as photographed
   spine: { bg: string; ink: string; h: number /*0.6-1*/; w: number /*px*/;
            kind: 'hardback'|'paperback'; lean?: number /*deg*/ }
   uncertain?: boolean   // spine only partly legible; UI must say so

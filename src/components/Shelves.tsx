@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { books, coverUrl, ROMAN, SHELF_CAPTIONS, type Book } from '../lib/collection'
+import { books, coverUrl, ROMAN, SHELF_CAPTIONS, shelfNumbers, type Book } from '../lib/collection'
 
 interface Props {
   onOpen: (book: Book) => void
@@ -53,7 +53,7 @@ function Spine({ book, index, onOpen }: { book: Book; index: number; onOpen: (b:
 }
 
 export default function Shelves({ onOpen }: Props) {
-  const shelves = [1, 2, 3, 4, 5] as const
+  const shelves = shelfNumbers
   return (
     <section id="shelves" aria-label="The shelves">
       <div className="bookcase">

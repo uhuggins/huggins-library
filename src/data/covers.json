@@ -257,11 +257,11 @@
     "firstPublishYear": 1912,
     "matchedTitle": "Coarse fishing"
   },
-  "bentley-trents-last-case": {
-    "coverId": 118583,
-    "workKey": "/works/OL1315930W",
-    "firstPublishYear": 1900,
-    "matchedTitle": "Trent's Last Case"
+  "mortimer-rumpoles-last-case": {
+    "coverId": 1468964,
+    "workKey": "/works/OL30834W",
+    "firstPublishYear": 1987,
+    "matchedTitle": "Rumpole's Last Case"
   },
   "lamb-tales-shakespeare": {
     "coverId": 12569842,
@@ -412,5 +412,1061 @@
     "workKey": "/works/OL2132198W",
     "firstPublishYear": 1900,
     "matchedTitle": "The historic Thames"
+  },
+  "longfellow-complete-poems": {
+    "coverId": 10930557,
+    "workKey": "/works/OL24393558W",
+    "firstPublishYear": 2018,
+    "matchedTitle": "Poems by Henry Wadsworth Longfellow Complete in Two Volumes"
+  },
+  "innes-comedy-of-terrors": {
+    "coverId": 15077822,
+    "workKey": "/works/OL3412333W",
+    "firstPublishYear": 1940,
+    "matchedTitle": "A Comedy of Terrors"
+  },
+  "innes-paper-thunderbolt": {
+    "coverId": 15224587,
+    "workKey": "/works/OL3412408W",
+    "firstPublishYear": 1950,
+    "matchedTitle": "The Paper Thunderbolt"
+  },
+  "innes-journeying-boy": {
+    "coverId": 15227673,
+    "workKey": "/works/OL3412404W",
+    "firstPublishYear": 1949,
+    "matchedTitle": "The Case of the Journeying Boy"
+  },
+  "innes-weight-of-evidence": {
+    "coverId": 15226593,
+    "workKey": "/works/OL3412380W",
+    "firstPublishYear": 1943,
+    "matchedTitle": "The Weight of the Evidence"
+  },
+  "innes-appleby-ospreys": {
+    "coverId": 6657248,
+    "workKey": "/works/OL3412401W",
+    "firstPublishYear": 1986,
+    "matchedTitle": "Appleby and the Ospreys"
+  },
+  "innes-ampersand-papers": {
+    "coverId": 15227666,
+    "workKey": "/works/OL3412308W",
+    "firstPublishYear": 1978,
+    "matchedTitle": "The Ampersand Papers"
+  },
+  "innes-one-man-show": {
+    "coverId": 15227583,
+    "workKey": "/works/OL33971330W",
+    "firstPublishYear": 1975,
+    "matchedTitle": "One-Man Show"
+  },
+  "innes-death-at-the-chase": {
+    "coverId": 15227655,
+    "workKey": "/works/OL3412339W",
+    "firstPublishYear": 1970,
+    "matchedTitle": "Death at the Chase"
+  },
+  "innes-bloody-wood": {
+    "coverId": 15224254,
+    "workKey": "/works/OL1381242W",
+    "firstPublishYear": 1966,
+    "matchedTitle": "The Bloody Wood"
+  },
+  "innes-awkward-lie": {
+    "coverId": 11340548,
+    "workKey": "/works/OL3412309W",
+    "firstPublishYear": 1971,
+    "matchedTitle": "An Awkward Lie"
+  },
+  "innes-man-from-the-sea": {
+    "coverId": 15227684,
+    "workKey": "/works/OL1381253W",
+    "firstPublishYear": 1955,
+    "matchedTitle": "The man from the sea"
+  },
+  "innes-hare-sitting-up": {
+    "coverId": 15227619,
+    "workKey": "/works/OL1381249W",
+    "firstPublishYear": 1959,
+    "matchedTitle": "Hare sitting up"
+  },
+  "innes-applebys-other-story": {
+    "coverId": 15224858,
+    "workKey": "/works/OL3412321W",
+    "firstPublishYear": 1974,
+    "matchedTitle": "Appleby's Other Story"
+  },
+  "innes-what-happened-at-hazelwood": {
+    "coverId": 15226351,
+    "workKey": "/works/OL1381264W",
+    "firstPublishYear": 1946,
+    "matchedTitle": "What happened at Hazelwood"
+  },
+  "loeb-propertius": {
+    "coverId": 10022553,
+    "workKey": "/works/OL1313849W",
+    "firstPublishYear": 1961,
+    "matchedTitle": "The poems of Sextus Propertius"
+  },
+  "dexter-jewel-that-was-ours": {
+    "coverId": 9959083,
+    "workKey": "/works/OL20781618W",
+    "firstPublishYear": 1901,
+    "matchedTitle": "The Jewel That Was Ours"
+  },
+  "oxford-latin-verse": {
+    "coverId": 5690472,
+    "workKey": "/works/OL16773359W",
+    "firstPublishYear": 1912,
+    "matchedTitle": "The Oxford book of Latin verse"
+  },
+  "cook-greeks-till-alexander": {
+    "coverId": 10760091,
+    "workKey": "/works/OL2639628W",
+    "firstPublishYear": 1961,
+    "matchedTitle": "The Greeks till Alexander"
+  },
+  "masterman-oxford-tragedy": {
+    "coverId": 14424727,
+    "workKey": "/works/OL6095195W",
+    "firstPublishYear": 1933,
+    "matchedTitle": "An Oxford Tragedy"
+  },
+  "ronan-changing-views": {
+    "coverId": 2517206,
+    "workKey": "/works/OL4089315W",
+    "firstPublishYear": 1961,
+    "matchedTitle": "Changing views of the universe"
+  },
+  "george-peck-of-troubles": {
+    "coverId": 14891612,
+    "workKey": "/works/OL9260421W",
+    "firstPublishYear": 1936,
+    "matchedTitle": "A peck of troubles"
+  },
+  "betjeman-collected-poems": {
+    "coverId": 14993895,
+    "workKey": "/works/OL31770968W",
+    "firstPublishYear": 1958,
+    "matchedTitle": "John Betjeman's Collected Poems."
+  },
+  "lewis-elementary-latin": {
+    "coverId": 12755540,
+    "workKey": "/works/OL27956862W",
+    "firstPublishYear": 1894,
+    "matchedTitle": "An elementary Latin dictionary"
+  },
+  "budge-the-mummy": {
+    "coverId": 8272412,
+    "workKey": "/works/OL1146258W",
+    "firstPublishYear": 1893,
+    "matchedTitle": "The mummy"
+  },
+  "pannekoek-history-astronomy": {
+    "coverId": null,
+    "workKey": "/works/OL9200935W",
+    "firstPublishYear": 1961,
+    "matchedTitle": "A history of astronomy"
+  },
+  "john-death-by-request": {
+    "coverId": 6486051,
+    "workKey": "/works/OL5458194W",
+    "firstPublishYear": 1984,
+    "matchedTitle": "Death by Request"
+  },
+  "mandl-statistical-physics": {
+    "coverId": 4117167,
+    "workKey": "/works/OL3604877W",
+    "firstPublishYear": 1971,
+    "matchedTitle": "Statistical physics"
+  },
+  "fox-watching-the-english": {
+    "coverId": 5167849,
+    "workKey": "/works/OL17031918W",
+    "firstPublishYear": 2001,
+    "matchedTitle": "Watching the English"
+  },
+  "allen-star-names": {
+    "coverId": 1448379,
+    "workKey": "/works/OL2343573W",
+    "firstPublishYear": 1899,
+    "matchedTitle": "Star-names and their meanings"
+  },
+  "moody-course-irish-history": {
+    "coverId": 12464660,
+    "workKey": "/works/OL16592447W",
+    "firstPublishYear": 1977,
+    "matchedTitle": "The course of Irish history"
+  },
+  "seitz-other-islands-nyc": {
+    "coverId": 678544,
+    "workKey": "/works/OL3256422W",
+    "firstPublishYear": 1996,
+    "matchedTitle": "The other islands of New York City"
+  },
+  "petrie-big-book-painting-nature": {
+    "coverId": 623960,
+    "workKey": "/works/OL4805007W",
+    "firstPublishYear": 1990,
+    "matchedTitle": "The big book of painting nature in watercolor"
+  },
+  "williams-masquerade": {
+    "coverId": 693061,
+    "workKey": "/works/OL5266006W",
+    "firstPublishYear": 1979,
+    "matchedTitle": "Masquerade"
+  },
+  "milton-paradise-lost": {
+    "coverId": 5992814,
+    "workKey": "/works/OL810991W",
+    "firstPublishYear": 1667,
+    "matchedTitle": "Paradise Lost"
+  },
+  "newall-victorian-watercolours": {
+    "coverId": 4071459,
+    "workKey": "/works/OL3496268W",
+    "firstPublishYear": 1987,
+    "matchedTitle": "Victorian watercolours"
+  },
+  "lewis-pencil-drawing-techniques": {
+    "coverId": 624414,
+    "workKey": "/works/OL19608328W",
+    "firstPublishYear": 1984,
+    "matchedTitle": "Pencil drawing techniques"
+  },
+  "folsach-privileged-few": {
+    "coverId": 15103992,
+    "workKey": "/works/OL9135389W",
+    "firstPublishYear": 2007,
+    "matchedTitle": "For the privileged few"
+  },
+  "hoskin-concise-astronomy": {
+    "coverId": 347084,
+    "workKey": "/works/OL18313486W",
+    "firstPublishYear": 1999,
+    "matchedTitle": "The Cambridge concise history of astronomy"
+  },
+  "adams-dilbert-treasury": {
+    "coverId": 497392,
+    "workKey": "/works/OL273369W",
+    "firstPublishYear": 1992,
+    "matchedTitle": "Dilbert"
+  },
+  "watterson-essential-calvin-hobbes": {
+    "coverId": 636119,
+    "workKey": "/works/OL3004224W",
+    "firstPublishYear": 1988,
+    "matchedTitle": "The essential Calvin and Hobbes"
+  },
+  "priestley-prince-of-pleasure": {
+    "coverId": 9688691,
+    "workKey": "/works/OL240529W",
+    "firstPublishYear": 1969,
+    "matchedTitle": "The prince of pleasure and his regency, 1811-20"
+  },
+  "culpeper-complete-herbal": {
+    "coverId": 4789556,
+    "workKey": "/works/OL4115906W",
+    "firstPublishYear": 1979,
+    "matchedTitle": "Culpeper's Complete herbal, and English physician..."
+  },
+  "holder-meaning-constitution": {
+    "coverId": 517154,
+    "workKey": "/works/OL2771572W",
+    "firstPublishYear": 1968,
+    "matchedTitle": "The meaning of the Constitution"
+  },
+  "wilton-constable-landscape": {
+    "coverId": 1637513,
+    "workKey": "/works/OL2192763W",
+    "firstPublishYear": 1986,
+    "matchedTitle": "Constable's English Landscape Scenery"
+  },
+  "harrison-watercolor-encyclopedia": {
+    "coverId": 513144,
+    "workKey": "/works/OL26175350W",
+    "firstPublishYear": 1999,
+    "matchedTitle": "The encyclopedia of watercolor techniques"
+  },
+  "thurston-early-astronomy": {
+    "coverId": 3932048,
+    "workKey": "/works/OL12510280W",
+    "firstPublishYear": 1994,
+    "matchedTitle": "Early astronomy"
+  },
+  "blake-color-in-watercolor": {
+    "coverId": 6794079,
+    "workKey": "/works/OL1841446W",
+    "firstPublishYear": 1982,
+    "matchedTitle": "Color in watercolor"
+  },
+  "daulaires-greek-myths": {
+    "coverId": 10692832,
+    "workKey": "/works/OL4771358W",
+    "firstPublishYear": 1962,
+    "matchedTitle": "D'Aulaires' Book of Greek Myths"
+  },
+  "fletcher-watson-magic-watercolour": {
+    "coverId": 451171,
+    "workKey": "/works/OL3620355W",
+    "firstPublishYear": 1988,
+    "matchedTitle": "The Magic of Watercolour"
+  },
+  "beningfield-english-landscape": {
+    "coverId": null,
+    "workKey": "/works/OL6322333W",
+    "firstPublishYear": 1985,
+    "matchedTitle": "BENINGFIELD'S ENGLISH LANDSCAPE"
+  },
+  "cikovsky-george-inness": {
+    "coverId": null,
+    "workKey": "/works/OL29399086W",
+    "firstPublishYear": 1985,
+    "matchedTitle": "George Inness"
+  },
+  "crespelle-monet-masterworks": {
+    "coverId": 13164874,
+    "workKey": "/works/OL31227736W",
+    "firstPublishYear": 1993,
+    "matchedTitle": "Monet"
+  },
+  "doig-calcutta": {
+    "coverId": null,
+    "workKey": "/works/OL1078633W",
+    "firstPublishYear": 1968,
+    "matchedTitle": "Calcutta"
+  },
+  "asterix-cleopatra": {
+    "coverId": 14890882,
+    "workKey": "/works/OL37785583W",
+    "firstPublishYear": 1970,
+    "matchedTitle": "Asterix and Cleopatra (An Asterix adventure)"
+  },
+  "asterix-in-britain": {
+    "coverId": 13549873,
+    "workKey": "/works/OL34795805W",
+    "firstPublishYear": 2012,
+    "matchedTitle": "Asterix in Britain. Astérix en Bretaña. Edición bilingüe"
+  },
+  "asterix-olympic-games": {
+    "coverId": null,
+    "workKey": "/works/OL39111633W",
+    "firstPublishYear": 1975,
+    "matchedTitle": "Asterix at the Olympic Games"
+  },
+  "asterix-chieftains-shield": {
+    "coverId": null,
+    "workKey": "/works/OL44152287W",
+    "firstPublishYear": 2009,
+    "matchedTitle": "Asterix and the Chieftain's Shield"
+  },
+  "durrell-fantastic-flying-journey": {
+    "coverId": 502836,
+    "workKey": "/works/OL259226W",
+    "firstPublishYear": 1987,
+    "matchedTitle": "The Fantastic Flying Journey"
+  },
+  "joyce-ulysses": {
+    "coverId": 13136548,
+    "workKey": "/works/OL86318W",
+    "firstPublishYear": 1914,
+    "matchedTitle": "Ulysses"
+  },
+  "everybodys-pepys": {
+    "coverId": 6636779,
+    "workKey": "/works/OL194000W",
+    "firstPublishYear": 1926,
+    "matchedTitle": "Everybody's Pepys"
+  },
+  "morehead-card-games": {
+    "coverId": null,
+    "workKey": "/works/OL43293754W",
+    "firstPublishYear": 1966,
+    "matchedTitle": "the official rules of card game"
+  },
+  "gardner-new-oxford-english-verse": {
+    "coverId": 14844096,
+    "workKey": "/works/OL1365670W",
+    "firstPublishYear": 1971,
+    "matchedTitle": "The new Oxford book of English verse, 1250-1950, chosen and edited by Helen Gardner"
+  },
+  "tyack-oxford-guide": {
+    "coverId": 129073,
+    "workKey": "/works/OL2169578W",
+    "firstPublishYear": 1998,
+    "matchedTitle": "Oxford"
+  },
+  "dexter-wench-is-dead": {
+    "coverId": 1750676,
+    "workKey": "/works/OL53546W",
+    "firstPublishYear": 1989,
+    "matchedTitle": "The Wench Is Dead"
+  },
+  "innes-death-presidents-lodging": {
+    "coverId": 14942012,
+    "workKey": "/works/OL1381246W",
+    "firstPublishYear": 1936,
+    "matchedTitle": "Death at the president's lodging"
+  },
+  "leroux-phantom-opera": {
+    "coverId": 14703470,
+    "workKey": "/works/OL25316562W",
+    "firstPublishYear": 2018,
+    "matchedTitle": "Phantom of the Opera"
+  },
+  "sheringham-open-creel": {
+    "coverId": 5668276,
+    "workKey": "/works/OL7884593W",
+    "firstPublishYear": 1910,
+    "matchedTitle": "An open creel"
+  },
+  "christie-abc-murders": {
+    "coverId": 14573514,
+    "workKey": "/works/OL471509W",
+    "firstPublishYear": 1936,
+    "matchedTitle": "The A.B.C. Murders"
+  },
+  "innes-sheiks-and-adders": {
+    "coverId": 6642924,
+    "workKey": "/works/OL3412410W",
+    "firstPublishYear": 1982,
+    "matchedTitle": "Sheiks and adders"
+  },
+  "gleadow-origin-zodiac": {
+    "coverId": 313349,
+    "workKey": "/works/OL6211192W",
+    "firstPublishYear": 1968,
+    "matchedTitle": "The origin of the zodiac"
+  },
+  "wilde-complete-illustrated": {
+    "coverId": null,
+    "workKey": "/works/OL118879W",
+    "firstPublishYear": null,
+    "matchedTitle": "The complete illustrated stories, plays & poems of Oscar Wilde"
+  },
+  "hume-hansom-cab": {
+    "coverId": 11353586,
+    "workKey": "/works/OL24659468W",
+    "firstPublishYear": 2012,
+    "matchedTitle": "The Mystery of a Hansom Cab"
+  },
+  "broome-oxford-murders": {
+    "coverId": null,
+    "workKey": "/works/OL43750559W",
+    "firstPublishYear": 1929,
+    "matchedTitle": "The Oxford murders"
+  },
+  "connington-tau-cross": {
+    "coverId": null,
+    "workKey": "/works/OL44175827W",
+    "firstPublishYear": 2012,
+    "matchedTitle": "The Tau Cross Mystery"
+  },
+  "daniel-cambridge-murders": {
+    "coverId": 9014152,
+    "workKey": "/works/OL1355095W",
+    "firstPublishYear": 1948,
+    "matchedTitle": "The Cambridge Murders"
+  },
+  "sayers-nine-tailors": {
+    "coverId": 482463,
+    "workKey": "/works/OL2234946W",
+    "firstPublishYear": 1934,
+    "matchedTitle": "The Nine Tailors"
+  },
+  "shakespeare-complete-works": {
+    "coverId": 10965199,
+    "workKey": "/works/OL24418304W",
+    "firstPublishYear": 2015,
+    "matchedTitle": "The Complete Works of William Shakespeare"
+  },
+  "corbett-leopard-rudraprayag": {
+    "coverId": 6995445,
+    "workKey": "/works/OL1771392W",
+    "firstPublishYear": 1948,
+    "matchedTitle": "The man-eating leopard of Rudraprayag"
+  },
+  "corbett-man-eaters-kumaon": {
+    "coverId": 700516,
+    "workKey": "/works/OL2075791W",
+    "firstPublishYear": 1945,
+    "matchedTitle": "Man-Eaters of Kumaon"
+  },
+  "corbett-jungle-lore": {
+    "coverId": 128197,
+    "workKey": "/works/OL2075787W",
+    "firstPublishYear": 1953,
+    "matchedTitle": "Jungle Lore"
+  },
+  "dexter-daughters-of-cain": {
+    "coverId": 196316,
+    "workKey": "/works/OL43170234W",
+    "firstPublishYear": 1994,
+    "matchedTitle": "The daughters of cain"
+  },
+  "ries-lean-startup": {
+    "coverId": 7104760,
+    "workKey": "/works/OL16086010W",
+    "firstPublishYear": 2011,
+    "matchedTitle": "The Lean Startup"
+  },
+  "lynch-learn-to-earn": {
+    "coverId": 301704,
+    "workKey": "/works/OL2841896W",
+    "firstPublishYear": 1995,
+    "matchedTitle": "Learn to Earn"
+  },
+  "hbr-change": {
+    "coverId": 8930078,
+    "workKey": "/works/OL20272471W",
+    "firstPublishYear": 2011,
+    "matchedTitle": "HBR's 10 Must Reads on Change Management"
+  },
+  "hbr-mental-toughness": {
+    "coverId": 9820855,
+    "workKey": "/works/OL20776141W",
+    "firstPublishYear": 2018,
+    "matchedTitle": "HBR's 10 Must Reads on Mental Toughness"
+  },
+  "hbr-strategy": {
+    "coverId": 8930090,
+    "workKey": "/works/OL20272481W",
+    "firstPublishYear": 2011,
+    "matchedTitle": "HBR's 10 Must Reads on Strategy"
+  },
+  "blyton-bimbo-and-topsy": {
+    "coverId": 14591050,
+    "workKey": "/works/OL1948250W",
+    "firstPublishYear": 1943,
+    "matchedTitle": "Bimbo and Topsy"
+  },
+  "blyton-amelia-jane-again": {
+    "coverId": 14575847,
+    "workKey": "/works/OL1948188W",
+    "firstPublishYear": 1960,
+    "matchedTitle": "Amelia Jane Again"
+  },
+  "blyton-island-of-adventure": {
+    "coverId": 14596605,
+    "workKey": "/works/OL1948161W",
+    "firstPublishYear": 1944,
+    "matchedTitle": "The Island of Adventure"
+  },
+  "blyton-last-term-malory": {
+    "coverId": 10642135,
+    "workKey": "/works/OL1948400W",
+    "firstPublishYear": 1951,
+    "matchedTitle": "Last Term at Malory Towers"
+  },
+  "blyton-third-year-malory": {
+    "coverId": 14576552,
+    "workKey": "/works/OL1948397W",
+    "firstPublishYear": 1966,
+    "matchedTitle": "Third Year at Malory Towers"
+  },
+  "blyton-fifth-formers-st-clares": {
+    "coverId": 14601500,
+    "workKey": "/works/OL1948652W",
+    "firstPublishYear": 1967,
+    "matchedTitle": "Fifth Formers of St. Clare's"
+  },
+  "blyton-twins-at-st-clares": {
+    "coverId": 14578402,
+    "workKey": "/works/OL1948600W",
+    "firstPublishYear": 1942,
+    "matchedTitle": "The Twins at St. Clare's"
+  },
+  "blyton-osullivan-twins": {
+    "coverId": 11691001,
+    "workKey": "/works/OL1948596W",
+    "firstPublishYear": 1793,
+    "matchedTitle": "The O'Sullivan Twins"
+  },
+  "blyton-second-form-st-clares": {
+    "coverId": 14597638,
+    "workKey": "/works/OL1949394W",
+    "firstPublishYear": 1963,
+    "matchedTitle": "The Second Form at St. Clare's"
+  },
+  "blyton-yellow-story-book": {
+    "coverId": 14605223,
+    "workKey": "/works/OL1949651W",
+    "firstPublishYear": 1968,
+    "matchedTitle": "The Yellow Story Book"
+  },
+  "blyton-five-oclock-tales": {
+    "coverId": 14574630,
+    "workKey": "/works/OL1948699W",
+    "firstPublishYear": 1991,
+    "matchedTitle": "Five O'Clock Tales"
+  },
+  "blyton-summer-term-st-clares": {
+    "coverId": 14572761,
+    "workKey": "/works/OL1948567W",
+    "firstPublishYear": 1943,
+    "matchedTitle": "Summer Term at St. Clare's"
+  },
+  "blyton-claudine-st-clares": {
+    "coverId": 14599615,
+    "workKey": "/works/OL1948341W",
+    "firstPublishYear": 1967,
+    "matchedTitle": "Claudine at St. Clares"
+  },
+  "blyton-seven-oclock-tales": {
+    "coverId": 11573718,
+    "workKey": "/works/OL1948559W",
+    "firstPublishYear": 1991,
+    "matchedTitle": "Seven o'clock tales"
+  },
+  "blyton-five-go-off-to-camp": {
+    "coverId": 6990699,
+    "workKey": "/works/OL1948676W",
+    "firstPublishYear": 1948,
+    "matchedTitle": "Five Go Off to Camp"
+  },
+  "blyton-five-treasure-island": {
+    "coverId": 14570937,
+    "workKey": "/works/OL1948704W",
+    "firstPublishYear": 1942,
+    "matchedTitle": "Five on a Treasure Island"
+  },
+  "blyton-five-go-adventuring-again": {
+    "coverId": 14601324,
+    "workKey": "/works/OL1948670W",
+    "firstPublishYear": 1943,
+    "matchedTitle": "Five Go Adventuring Again"
+  },
+  "dickens-tale-two-cities-ladybird": {
+    "coverId": 13301713,
+    "workKey": "/works/OL8193465W",
+    "firstPublishYear": 1800,
+    "matchedTitle": "A Tale of Two Cities"
+  },
+  "nagatomo-draw-your-own-manga": {
+    "coverId": 3290456,
+    "workKey": "/works/OL9065762W",
+    "firstPublishYear": 2003,
+    "matchedTitle": "Draw Your Own Manga"
+  },
+  "north-to-be-or-not-to-be": {
+    "coverId": 9140351,
+    "workKey": "/works/OL20475554W",
+    "firstPublishYear": 2013,
+    "matchedTitle": "To Be or Not To Be"
+  },
+  "romberger-post-york": {
+    "coverId": null,
+    "workKey": "/works/OL21908831W",
+    "firstPublishYear": 2012,
+    "matchedTitle": "Post York"
+  },
+  "rossi-edward-hopper": {
+    "coverId": null,
+    "workKey": "/works/OL25902095W",
+    "firstPublishYear": 2021,
+    "matchedTitle": "Edward Hopper"
+  },
+  "ramv-laila-starr": {
+    "coverId": 12705640,
+    "workKey": "/works/OL25803931W",
+    "firstPublishYear": 2022,
+    "matchedTitle": "The Many Deaths of Laila Starr"
+  },
+  "leblanc-arsene-lupin": {
+    "coverId": 10399747,
+    "workKey": "/works/OL1064277W",
+    "firstPublishYear": 1907,
+    "matchedTitle": "Arsène Lupin, gentleman-cambrioleur"
+  },
+  "tomine-killing-and-dying": {
+    "coverId": 8838123,
+    "workKey": "/works/OL20010496W",
+    "firstPublishYear": 2015,
+    "matchedTitle": "Killing and dying"
+  },
+  "lutes-berlin": {
+    "coverId": 873633,
+    "workKey": "/works/OL8571227W",
+    "firstPublishYear": 2000,
+    "matchedTitle": "Berlin: Cuidad de piedras/ Berlin"
+  },
+  "qamar-trust-no-aunty": {
+    "coverId": 14527681,
+    "workKey": "/works/OL19717483W",
+    "firstPublishYear": 2017,
+    "matchedTitle": "Trust no aunty"
+  },
+  "moore-watchmen": {
+    "coverId": 7774899,
+    "workKey": "/works/OL2897798W",
+    "firstPublishYear": 1986,
+    "matchedTitle": "Watchmen"
+  },
+  "gonick-cartoon-history-1": {
+    "coverId": 4636565,
+    "workKey": "/works/OL2982315W",
+    "firstPublishYear": 1978,
+    "matchedTitle": "The cartoon history of the universe"
+  },
+  "gonick-cartoon-history-2": {
+    "coverId": null,
+    "workKey": "/works/OL2982295W",
+    "firstPublishYear": 1995,
+    "matchedTitle": "The cartoon history of the universe II"
+  },
+  "carson-nox": {
+    "coverId": 9119927,
+    "workKey": "/works/OL1998432W",
+    "firstPublishYear": 2010,
+    "matchedTitle": "Nox"
+  },
+  "buchan-augustus": {
+    "coverId": 2989045,
+    "workKey": "/works/OL76570W",
+    "firstPublishYear": 1937,
+    "matchedTitle": "Augustus"
+  },
+  "tufte-visual-display": {
+    "coverId": 725045,
+    "workKey": "/works/OL2824012W",
+    "firstPublishYear": 1983,
+    "matchedTitle": "The Visual Display of Quantitative Information"
+  },
+  "schwabish-better-data-viz": {
+    "coverId": 13170388,
+    "workKey": "/works/OL21694682W",
+    "firstPublishYear": 2021,
+    "matchedTitle": "Better Data Visualizations - a Guide for Scholars, Researchers, and Wonks"
+  },
+  "matloff-art-of-r": {
+    "coverId": 7117190,
+    "workKey": "/works/OL16116942W",
+    "firstPublishYear": 2011,
+    "matchedTitle": "The art of R programming"
+  },
+  "huggins-my-little-ramayana": {
+    "coverId": null,
+    "workKey": "/works/OL30357621W",
+    "firstPublishYear": 2019,
+    "matchedTitle": "My Little Ramayana"
+  },
+  "rothstein-color-of-law": {
+    "coverId": 8816502,
+    "workKey": "/works/OL19671595W",
+    "firstPublishYear": 2017,
+    "matchedTitle": "The Color of Law"
+  },
+  "torquemada-cains-jawbone": {
+    "coverId": 12384420,
+    "workKey": "/works/OL25635181W",
+    "firstPublishYear": 2019,
+    "matchedTitle": "Cain's Jawbone"
+  },
+  "hardy-madding-crowd": {
+    "coverId": 902038,
+    "workKey": "/works/OL44995W",
+    "firstPublishYear": 1874,
+    "matchedTitle": "Far from the Madding Crowd"
+  },
+  "wilde-dorian-gray": {
+    "coverId": 14314858,
+    "workKey": "/works/OL8193416W",
+    "firstPublishYear": 1890,
+    "matchedTitle": "The Picture of Dorian Gray"
+  },
+  "heaney-opened-ground": {
+    "coverId": 223342,
+    "workKey": "/works/OL1810101W",
+    "firstPublishYear": 1998,
+    "matchedTitle": "Opened Ground"
+  },
+  "wayne-brown-bread-butter": {
+    "coverId": null,
+    "workKey": "/works/OL6632562W",
+    "firstPublishYear": 1973,
+    "matchedTitle": "Brown bread and butter in the basement"
+  },
+  "dove-penguin-american-poetry": {
+    "coverId": 10342124,
+    "workKey": "/works/OL21181512W",
+    "firstPublishYear": 2013,
+    "matchedTitle": "The Penguin Anthology of Twentieth-Century American Poetry"
+  },
+  "hemingway-snows-kilimanjaro": {
+    "coverId": 75458,
+    "workKey": "/works/OL63053W",
+    "firstPublishYear": 1927,
+    "matchedTitle": "The Snows of Kilimanjaro and Other Stories"
+  },
+  "huxley-brave-new-world": {
+    "coverId": 8231823,
+    "workKey": "/works/OL64365W",
+    "firstPublishYear": 1932,
+    "matchedTitle": "Brave New World"
+  },
+  "guha-india-after-gandhi": {
+    "coverId": 6821235,
+    "workKey": "/works/OL15858520W",
+    "firstPublishYear": 2007,
+    "matchedTitle": "India after Gandhi"
+  },
+  "larrick-piping-down-valleys": {
+    "coverId": 392096,
+    "workKey": "/works/OL4476507W",
+    "firstPublishYear": 1968,
+    "matchedTitle": "Piping Down the Valleys Wild"
+  },
+  "eggers-the-circle": {
+    "coverId": 8334682,
+    "workKey": "/works/OL16808654W",
+    "firstPublishYear": 2013,
+    "matchedTitle": "The Circle"
+  },
+  "dexter-last-bus-woodstock": {
+    "coverId": 576840,
+    "workKey": "/works/OL38710259W",
+    "firstPublishYear": 1975,
+    "matchedTitle": "Last bus to Woodstock"
+  },
+  "lecarre-tinker-tailor": {
+    "coverId": 7021556,
+    "workKey": "/works/OL15723131W",
+    "firstPublishYear": 1974,
+    "matchedTitle": "Tinker Tailor Soldier Spy"
+  },
+  "schroeder-thermal-physics": {
+    "coverId": 134641,
+    "workKey": "/works/OL8020011W",
+    "firstPublishYear": 1999,
+    "matchedTitle": "An Introduction to Thermal Physics"
+  },
+  "baierlein-thermal-physics": {
+    "coverId": 8024472,
+    "workKey": "/works/OL1958200W",
+    "firstPublishYear": 1999,
+    "matchedTitle": "Thermal physics"
+  },
+  "tanen-bitter-with-baggage": {
+    "coverId": 844081,
+    "workKey": "/works/OL5733056W",
+    "firstPublishYear": 2003,
+    "matchedTitle": "Bitter with baggage seeks same"
+  },
+  "tanen-going-for-bronze": {
+    "coverId": 488543,
+    "workKey": "/works/OL5733054W",
+    "firstPublishYear": 2005,
+    "matchedTitle": "Going for the bronze"
+  },
+  "ousby-cambridge-guide-literature": {
+    "coverId": 339046,
+    "workKey": "/works/OL1845025W",
+    "firstPublishYear": 1996,
+    "matchedTitle": "Cambridge paperback guide to literature in English"
+  },
+  "dreyer-thales-to-kepler": {
+    "coverId": 8448632,
+    "workKey": "/works/OL4641334W",
+    "firstPublishYear": 1953,
+    "matchedTitle": "A history of astronomy from Thales to Kepler"
+  },
+  "kaler-ever-changing-sky": {
+    "coverId": 3912610,
+    "workKey": "/works/OL3343041W",
+    "firstPublishYear": 1996,
+    "matchedTitle": "The Ever-Changing Sky"
+  },
+  "eggleton-binary-stars": {
+    "coverId": 15165410,
+    "workKey": "/works/OL21034753W",
+    "firstPublishYear": 2006,
+    "matchedTitle": "Evolutionary Processes in Binary and Multiple Stars"
+  },
+  "jones-mistakes-that-worked": {
+    "coverId": 4094164,
+    "workKey": "/works/OL1889083W",
+    "firstPublishYear": 1991,
+    "matchedTitle": "Mistakes that worked"
+  },
+  "gifford-ulysses-annotated": {
+    "coverId": 324509,
+    "workKey": "/works/OL4482598W",
+    "firstPublishYear": 1988,
+    "matchedTitle": "Ulysses annotated"
+  },
+  "linehan-st-johns-college": {
+    "coverId": 13322696,
+    "workKey": "/works/OL16080852W",
+    "firstPublishYear": 2011,
+    "matchedTitle": "St John's College, Cambridge"
+  },
+  "hesse-letters-from-rifka": {
+    "coverId": 579226,
+    "workKey": "/works/OL1847166W",
+    "firstPublishYear": 1992,
+    "matchedTitle": "Letters from Rifka"
+  },
+  "kawakami-unuseless-inventions": {
+    "coverId": 249006,
+    "workKey": "/works/OL261359W",
+    "firstPublishYear": 1995,
+    "matchedTitle": "101 Unuseless Japanese Inventions"
+  },
+  "dahl-charlie-chocolate-factory": {
+    "coverId": 12459564,
+    "workKey": "/works/OL45790W",
+    "firstPublishYear": 1964,
+    "matchedTitle": "Charlie and the Chocolate Factory"
+  },
+  "katayama-urawaza": {
+    "coverId": 2647401,
+    "workKey": "/works/OL9600868W",
+    "firstPublishYear": 2008,
+    "matchedTitle": "Urawaza"
+  },
+  "peterson-eastern-birds": {
+    "coverId": 8041843,
+    "workKey": "/works/OL2654935W",
+    "firstPublishYear": 1983,
+    "matchedTitle": "A field guide to the birds of eastern and central North America"
+  },
+  "juster-phantom-tollbooth": {
+    "coverId": 8578174,
+    "workKey": "/works/OL1636262W",
+    "firstPublishYear": 1961,
+    "matchedTitle": "The Phantom Tollbooth"
+  },
+  "sachar-someday-angeline": {
+    "coverId": 237521,
+    "workKey": "/works/OL116258W",
+    "firstPublishYear": 1983,
+    "matchedTitle": "Someday Angeline"
+  },
+  "woolf-room-of-ones-own": {
+    "coverId": 6559057,
+    "workKey": "/works/OL39379W",
+    "firstPublishYear": 1929,
+    "matchedTitle": "A Room of One's Own"
+  },
+  "covey-7-habits": {
+    "coverId": 10079937,
+    "workKey": "/works/OL2629977W",
+    "firstPublishYear": 1989,
+    "matchedTitle": "The 7 Habits of Highly Effective People"
+  },
+  "rey-curious-george": {
+    "coverId": 6482322,
+    "workKey": "/works/OL2023849W",
+    "firstPublishYear": 1941,
+    "matchedTitle": "Curious George"
+  },
+  "rey-curious-george-takes-job": {
+    "coverId": 255462,
+    "workKey": "/works/OL2023845W",
+    "firstPublishYear": 1947,
+    "matchedTitle": "Curious George Takes a Job"
+  },
+  "lobel-lucille": {
+    "coverId": 10419317,
+    "workKey": "/works/OL1973437W",
+    "firstPublishYear": 1964,
+    "matchedTitle": "Lucille"
+  },
+  "brown-goodnight-moon": {
+    "coverId": 35556,
+    "workKey": "/works/OL151798W",
+    "firstPublishYear": 1947,
+    "matchedTitle": "Goodnight Moon"
+  },
+  "fatio-happy-lion": {
+    "coverId": 234034,
+    "workKey": "/works/OL5837486W",
+    "firstPublishYear": 1954,
+    "matchedTitle": "The happy lion"
+  },
+  "feynman-character-physical-law": {
+    "coverId": 96733,
+    "workKey": "/works/OL271750W",
+    "firstPublishYear": 1965,
+    "matchedTitle": "The Character of Physical Law"
+  },
+  "tolkien-lord-of-the-rings": {
+    "coverId": 14625765,
+    "workKey": "/works/OL27448W",
+    "firstPublishYear": 1954,
+    "matchedTitle": "The Lord of the Rings"
+  },
+  "wyndham-day-of-triffids": {
+    "coverId": 535027,
+    "workKey": "/works/OL1911336W",
+    "firstPublishYear": 1951,
+    "matchedTitle": "The Day of the Triffids"
+  },
+  "jacobs-monkeys-paw": {
+    "coverId": 2063516,
+    "workKey": "/works/OL1515165W",
+    "firstPublishYear": 1976,
+    "matchedTitle": "The monkey's paw"
+  },
+  "yeats-fairy-folk-tales": {
+    "coverId": 681299,
+    "workKey": "/works/OL38726W",
+    "firstPublishYear": 1973,
+    "matchedTitle": "Fairy and folk tales of Ireland"
+  },
+  "fulves-table-magic": {
+    "coverId": 309649,
+    "workKey": "/works/OL3479789W",
+    "firstPublishYear": 1981,
+    "matchedTitle": "Self-working table magic"
+  },
+  "menzel-stars-planets": {
+    "coverId": 4225027,
+    "workKey": "/works/OL5594064W",
+    "firstPublishYear": 1964,
+    "matchedTitle": "A Field Guide to the Stars and Planets"
+  },
+  "schaefer-field-guide-atmosphere": {
+    "coverId": 6500674,
+    "workKey": "/works/OL3473359W",
+    "firstPublishYear": 1981,
+    "matchedTitle": "A field guide to the atmosphere"
+  },
+  "hannam-gods-philosophers": {
+    "coverId": 12322734,
+    "workKey": "/works/OL15472351W",
+    "firstPublishYear": 2009,
+    "matchedTitle": "God's philosophers"
+  },
+  "stewart-does-god-play-dice": {
+    "coverId": 781529,
+    "workKey": "/works/OL175883W",
+    "firstPublishYear": 1989,
+    "matchedTitle": "Does God play dice?"
+  },
+  "shakespeare-tempest": {
+    "coverId": 8155661,
+    "workKey": "/works/OL362699W",
+    "firstPublishYear": 1611,
+    "matchedTitle": "The Tempest"
+  },
+  "sayers-bellona-club": {
+    "coverId": 43793,
+    "workKey": "/works/OL2234960W",
+    "firstPublishYear": 1928,
+    "matchedTitle": "The unpleasantness at the Bellona Club"
+  },
+  "white-darkness-at-pemberley": {
+    "coverId": 12767684,
+    "workKey": "/works/OL1388008W",
+    "firstPublishYear": 1932,
+    "matchedTitle": "Darkness at Pemberley"
+  },
+  "coville-midsummer-nights-dream": {
+    "coverId": 110751,
+    "workKey": "/works/OL69333W",
+    "firstPublishYear": 1996,
+    "matchedTitle": "William Shakespeare's A midsummer night's dream"
   }
 }
