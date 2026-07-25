@@ -23,10 +23,18 @@ const matches = (b: Book, q: string): boolean => {
     .every((word) => hay.includes(word))
 }
 
+const CAP = 24
+
 export default function Collection({ onOpen, genre, onPick }: Props) {
   const [q, setQ] = useState<string>(() => readHashQuery())
+  const [expanded, setExpanded] = useState(false)
   const wrote = useRef(false)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  // A new search or filter starts back at the first page of results.
+  useEffect(() => {
+    setExpanded(false)
+  }, [genre, q])
 
   // One writer for the section's URL state.
   useEffect(() => {
@@ -43,6 +51,12 @@ export default function Collection({ onOpen, genre, onPick }: Props) {
 
   const shown = books.filter((b) => (genre ? b.genre === genre : true) && (q.trim() ? matches(b, q) : true))
   const filtering = genre !== null || q.trim() !== ''
+  const visible = expanded ? shown : shown.slice(0, CAP)
+
+  const collapse = () => {
+    setExpanded(false)
+    document.getElementById('collection')?.scrollIntoView()
+  }
 
   return (
     <section id="collection" aria-label="The collection">
@@ -115,7 +129,7 @@ export default function Collection({ onOpen, genre, onPick }: Props) {
         </p>
       ) : (
         <ul className="card-grid">
-          {shown.map((b) => {
+          {visible.map((b) => {
             const cover = coverUrl(b, 'M')
             return (
               <li key={b.id}>
@@ -140,6 +154,20 @@ export default function Collection({ onOpen, genre, onPick }: Props) {
             )
           })}
         </ul>
+      )}
+
+      {shown.length > CAP && (
+        <div className="show-more">
+          {expanded ? (
+            <button type="button" className="show-more-btn" onClick={collapse}>
+              Show the first {CAP}
+            </button>
+          ) : (
+            <button type="button" className="show-more-btn" onClick={() => setExpanded(true)}>
+              Show all {shown.length} volumes
+            </button>
+          )}
+        </div>
       )}
     </section>
   )

@@ -474,6 +474,27 @@ section {
   padding: 40px 0 20px;
 }
 
+.show-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.show-more-btn {
+  padding: 10px 24px;
+  border: 1px solid var(--gilt);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--gilt-bright);
+  transition: background 0.2s, color 0.2s;
+}
+
+.show-more-btn:hover {
+  background: var(--gilt);
+  color: var(--page);
+}
+
 .pills {
   display: flex;
   flex-wrap: wrap;
