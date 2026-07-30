@@ -54,3 +54,12 @@ If you were asked to rebuild or port the app, follow `docs/BUILD-SPEC.md`.
 
 Pushes to `main` deploy to Vercel (project `huggins-library`, personal scope).
 Manual deploy: `vercel --prod`.
+
+## Repo conventions
+
+- Commits carry the owner's identity only. Never add Co-Authored-By trailers,
+  AI attribution, or mentions of Claude to commit messages; the history was
+  rewritten once to remove them and should stay that way.
+- `README.md` is written for people browsing the repo, not for tooling. Keep
+  technical detail in `docs/DEVELOPMENT.md` (day-to-day) and
+  `docs/BUILD-SPEC.md` (full spec), and model instructions here.

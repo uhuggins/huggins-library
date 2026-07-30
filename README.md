@@ -1,58 +1,41 @@
 # The Huggins Library
 
-**Live:** https://huggins-library.vercel.app ·
-**Repo:** https://github.com/uhuggins/huggins-library
-(pushes to `main` deploy automatically)
+A catalog of the books on our shelves, made from photographs of their spines.
 
-A home library catalogued from photographs. The shelves are photographed spine by
-spine; the books are identified, tagged by genre and author, matched to cover art
-and publication records on Open Library, and laid out as a browsable site.
+**Browse it: https://huggins-library.vercel.app**
 
-Design notes: dark "library at night" theme drawn from the actual bindings in the
-photos (green cloth, gilt lettering, aged paper), set in Libre Caslon and Archivo,
-with one gilt accent. Inspired by the physicality of Stripe Press.
+Point a camera at a shelf and the library grows. Every legible spine becomes a
+record with its cover art, its writer, its year, and its place on the shelf.
+The site shows the collection four ways:
 
-## Sections
-
-- **Shelves** — a CSS-3D bookcase generated from the catalog. Every spine's color,
-  height, thickness, and lean approximates the real shelf. Hover pulls a book out
-  and turns its actual cover toward you.
-- **Collection** — cover grid with genre filters (state in the URL hash).
-- **Ledger** — stat tiles, genre bars, and an era histogram, plus a plain-table view.
-- **Constellation** — a force-directed graph: books orbit their genre hubs, gold
-  lines join books by the same writer, dotted lines follow cross-genre threads
-  (Ireland, Cambridge, fishing, and so on).
-
-## Running
-
-```sh
-npm install
-npm run dev      # http://localhost:5180
-npm run build    # typecheck + production build
-```
-
-## Data pipeline
-
-- `src/data/books.ts` — the hand-checked catalog transcribed from the photos.
-  Books whose spines were only partly legible are flagged `uncertain` and say so
-  in the UI.
-- `scripts/fetch-covers.mjs` (`npm run covers`) — looks each title up in the Open
-  Library search API and writes cover ids, work keys, and first-publication years
-  to `src/data/covers.json`. Covers are then served from covers.openlibrary.org
-  at runtime. Two known-bad matches were removed by hand; re-running the script
-  will bring them back, so re-check its output if you run it again.
+- **The shelves**, drawn as shelves: rows of three-dimensional spines in their
+  real colors and sizes. Pull one out and it turns its cover toward you.
+- **The collection**, a searchable grid of covers you can filter by section.
+- **The ledger**, where the library is counted: sections, eras, and spans.
+- **The constellation**, a night sky of the whole collection. Books orbit
+  their genres, gold lines follow a writer from book to book, and dotted
+  threads trace the currents that run through the shelves: Ireland,
+  Cambridge, fishing, the stars.
 
 ## Adding books
 
-Photograph a shelf, upload the photos to `photos/inbox/` (the site's "Add to
-the library" section links straight to GitHub's upload page, which works from
-a phone camera roll), then either:
+1. Photograph a shelf straight on, one shelf per frame, spines filling the
+   picture.
+2. Put the photos in the inbox:
+   [upload to photos/inbox](https://github.com/uhuggins/huggins-library/upload/main/photos/inbox)
+   works straight from a phone.
+3. Have Claude catalog them: open this folder and run `claude "/add-books"`.
+   It reads the spines, fetches the covers, and every view of the site
+   updates from the catalog.
 
-- run `claude "/add-books"` locally, which transcribes the spines, tags
-  genres, fetches covers, verifies the build, and archives the photos; or
-- add an `ANTHROPIC_API_KEY` repository secret once, and the
-  `Catalog new shelf photos` GitHub Action will have Claude Sonnet do the same
-  automatically on upload and open a pull request.
+## A few honest notes
 
-Detailed model instructions live in `CLAUDE.md`,
-`.claude/skills/add-books/SKILL.md`, and `docs/BUILD-SPEC.md`.
+The catalog never invents a book. Spines too worn to read are skipped, and
+records built from a partly legible spine say so. Cover art and publication
+records come from Open Library; spine colors are approximations sampled from
+the photographs; a handful of covers are the same work under a different
+edition's title.
+
+Curious how it works? See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for the
+day-to-day mechanics and [docs/BUILD-SPEC.md](docs/BUILD-SPEC.md) for the full
+design specification.
