@@ -38,16 +38,32 @@ verification bar; keep `npm run build` green.
 
 ## Adding books, mechanically
 
-Photos go to `photos/inbox/` (the site's "Add to the library" section links
-GitHub's upload page for that folder). Then either:
+Photos land in `photos/inbox/` by one of three routes:
 
-- run `claude "/add-books"` locally, which transcribes spines, appends catalog
-  entries, fetches covers, verifies the build, and archives the photos to
-  `photos/shelves/`; or
-- add an `ANTHROPIC_API_KEY` repository secret once, and the
-  `Catalog new shelf photos` workflow (`.github/workflows/add-books.yml`)
-  runs the same procedure in CI on every inbox upload and opens a pull
-  request. Without the secret the workflow fails early and can be ignored.
+1. **The website form** ("Add your shelf"): anyone submits a name and photos.
+   The browser shrinks each photo to a JPEG, `api/submit-shelf.ts` (a Vercel
+   function) validates it and commits it to the inbox as
+   `name--<timestamp>.jpg`. The name prefix marks a guest shelf: the
+   cataloguing pass gives it a new shelf number and registers the owner in
+   `SHELF_OWNERS` (`src/lib/collection.ts`).
+2. **GitHub's upload page** for the folder, from any logged-in account.
+3. **Locally**, by dropping files in the folder.
+
+Then either run `claude "/add-books"` locally (transcribes spines, appends
+catalog entries, fetches covers, verifies the build, archives photos to
+`photos/shelves/`), or let the `Catalog new shelf photos` workflow do the same
+in CI and open a pull request. Nothing reaches the site until that pull
+request is merged, which is the review gate for public submissions.
+
+### One-time setup for the hosted flow
+
+- **Vercel** → Project → Settings → Environment Variables:
+  `GITHUB_CONTENT_TOKEN` = a fine-grained personal access token scoped to
+  this repository with Contents read/write. Until it exists the form's
+  endpoint answers 503 with a friendly message.
+- **GitHub** → Settings → Secrets and variables → Actions:
+  `ANTHROPIC_API_KEY`, so the workflow can run Claude. Without it the
+  workflow fails early and photos simply wait in the inbox.
 
 ## Deploy
 

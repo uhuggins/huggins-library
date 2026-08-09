@@ -50,7 +50,7 @@ export default function App() {
           <a href="#collection">Collection</a>
           <a href="#ledger">Ledger</a>
           <a href="#constellation">Constellation</a>
-          <a href="#add">Add books</a>
+          <a href="#add">Add your shelf</a>
         </div>
       </nav>
 

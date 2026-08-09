@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { books, coverUrl, ROMAN, SHELF_CAPTIONS, shelfNumbers, type Book } from '../lib/collection'
+import { books, coverUrl, ROMAN, SHELF_CAPTIONS, SHELF_OWNERS, shelfNumbers, type Book } from '../lib/collection'
 
 interface Props {
   onOpen: (book: Book) => void
@@ -63,6 +63,7 @@ export default function Shelves({ onOpen }: Props) {
             <div className="shelf" key={n}>
               <div className="shelf-label">
                 <span className="shelf-roman">Shelf {ROMAN[n - 1]}</span>
+                {SHELF_OWNERS[n] && <span className="shelf-owner">{SHELF_OWNERS[n]}&rsquo;s shelf</span>}
                 <span className="shelf-caption">{SHELF_CAPTIONS[n]}</span>
                 <span className="shelf-count">{row.length} vols.</span>
               </div>

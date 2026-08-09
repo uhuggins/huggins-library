@@ -41,9 +41,11 @@ jobs:
           prompt: |
             Run the /add-books skill on the photos in photos/inbox/. Follow the
             skill exactly: transcribe only legible spines, flag uncertain ones,
-            run npm run covers and review its matches, run npm run build, and
-            archive the processed photos to photos/shelves/. Then create a
-            branch named add-books/<date>, commit the changes, push it, and
-            open a pull request to main summarizing what was added and what
-            was skipped. Do not push to main directly.
+            handle guest photos (name--timestamp.jpg) as new owned shelves per
+            the skill, run npm run covers and review its matches, run npm run
+            build, and archive the processed photos to photos/shelves/. Then
+            create a branch named add-books/<date>, commit the changes, push
+            it, and open a pull request to main summarizing what was added,
+            what was skipped, and whose shelves arrived. Do not push to main
+            directly.
           claude_args: '--model claude-sonnet-5'

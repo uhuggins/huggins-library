@@ -84,6 +84,10 @@ export const SHELF_CAPTIONS: Record<number, string> = {
   13: 'Sheet music and stray volumes',
 }
 
+// Shelves contributed by family and friends carry their name,
+// e.g. { 14: 'Ada' } renders as "Shelf XIV · Ada's shelf".
+export const SHELF_OWNERS: Record<number, string> = {}
+
 export const shelfNumbers: number[] = [...new Set(books.map((b) => b.shelf))].sort((a, b) => a - b)
 
 export { books, peopleOf }

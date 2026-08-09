@@ -17,16 +17,15 @@ The site shows the collection four ways:
   threads trace the currents that run through the shelves: Ireland,
   Cambridge, fishing, the stars.
 
-## Adding books
+## Adding a shelf
 
-1. Photograph a shelf straight on, one shelf per frame, spines filling the
-   picture.
-2. Put the photos in the inbox:
-   [upload to photos/inbox](https://github.com/uhuggins/huggins-library/upload/main/photos/inbox)
-   works straight from a phone.
-3. Have Claude catalog them: open this folder and run `claude "/add-books"`.
-   It reads the spines, fetches the covers, and every view of the site
-   updates from the catalog.
+Use the "Add your shelf" form at the bottom of the site: your name, a photo of
+your bookshelf, send. The spines are read, the covers fetched, and once the
+librarian approves the record your shelf appears in the library with your name
+on it. Anyone in the family can do this from a phone.
+
+(The librarian's own route still works too: drop photos in `photos/inbox/` and
+run `claude "/add-books"`; details in the development notes.)
 
 ## A few honest notes
 

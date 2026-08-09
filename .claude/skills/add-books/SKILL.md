@@ -20,9 +20,16 @@ completeness: a skipped unreadable spine is fine, an invented book is not.
    to neighbors, hardback or paperback, any lean).
 
 3. **Decide shelf placement.** Ask the user which shelf number the photo shows
-   if it is not obvious. New shelves: extend the `shelf` union in `books.ts`,
-   add a caption in `SHELF_CAPTIONS` and, if past shelf 10, extend `ROMAN` in
-   `lib/collection.ts`.
+   if it is not obvious. New shelves: use the next free number, add a caption
+   in `SHELF_CAPTIONS` and, if needed, extend `ROMAN` in `lib/collection.ts`.
+
+   **Guest shelves:** inbox files named `somename--<timestamp>.jpg` came from
+   the website's "Add your shelf" form; the prefix is the submitter's name.
+   Each guest's photos become NEW shelves (never merged into the house
+   shelves), with the guest registered in `SHELF_OWNERS` in
+   `lib/collection.ts` under the new shelf number (capitalize the name
+   sensibly, e.g. `ada-w` becomes `Ada W`). Write the caption from the
+   shelf's contents as usual.
 
 4. **Check for duplicates** against existing ids and titles in
    `src/data/books.ts` before adding anything.

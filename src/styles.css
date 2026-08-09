@@ -1169,67 +1169,166 @@ section {
   border-color: var(--paper-dim);
 }
 
-/* ── Add to the library ──────────────────────────────────────────────────── */
+/* ── Add your shelf ──────────────────────────────────────────────────────── */
 
-.steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.add-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
 }
 
-.step {
-  position: relative;
+.shelf-form {
   background: var(--surface);
   border: 1px solid var(--hairline-faint);
+  border-radius: 8px;
+  padding: 28px 30px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--paper-mute);
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 14px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--paper);
+  background: var(--surface-2);
+  border: 1px solid var(--hairline);
   border-radius: 6px;
-  padding: 22px 24px 20px;
 }
 
-.step-n {
-  font-family: var(--display);
-  font-size: 30px;
-  color: var(--gilt);
-  line-height: 1;
+.form-input::placeholder {
+  color: var(--paper-mute);
 }
 
-.step h3 {
-  font-size: 19px;
-  margin: 12px 0 8px;
+.form-input:focus-visible {
+  border-color: var(--gilt);
+  outline: none;
 }
 
-.step p {
+.form-file {
+  width: 100%;
   font-size: 13.5px;
   color: var(--paper-dim);
-  margin: 0;
 }
 
-.step a {
+.form-file::file-selector-button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
   color: var(--gilt-bright);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(224, 196, 126, 0.5);
+  background: none;
+  border: 1px solid var(--gilt);
+  border-radius: 999px;
+  padding: 8px 16px;
+  margin-right: 12px;
+  cursor: pointer;
 }
 
-.step a:hover {
-  color: var(--paper);
-  border-color: var(--paper);
+.form-file::file-selector-button:hover {
+  background: var(--gilt);
+  color: var(--page);
 }
 
-.step code {
+.form-hint {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  color: var(--paper-mute);
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-error {
+  margin: 0 0 16px;
+  font-size: 13.5px;
+  color: #e08a7a;
+}
+
+.form-submit {
+  width: 100%;
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.form-fine {
+  margin: 14px 0 0;
   font-family: var(--mono);
-  font-size: 12px;
-  background: var(--surface-2);
+  font-size: 11px;
+  color: var(--paper-mute);
+  text-align: center;
+}
+
+.form-done h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.form-done p {
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--paper-dim);
+  margin: 0 0 20px;
+}
+
+.shoot-guide {
+  background: var(--surface);
   border: 1px solid var(--hairline-faint);
-  border-radius: 4px;
-  padding: 2px 6px;
+  border-radius: 8px;
+  padding: 26px 28px;
+}
+
+.shoot-guide h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.shoot-guide ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.shoot-guide li {
+  font-size: 13.5px;
+  color: var(--paper-dim);
+  margin-bottom: 8px;
+}
+
+.shelf-owner {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
   white-space: nowrap;
 }
 
 @media (max-width: 860px) {
-  .steps {
+  .add-grid {
     grid-template-columns: 1fr;
+  }
+
+  .form-input {
+    font-size: 16px;
   }
 }
 
