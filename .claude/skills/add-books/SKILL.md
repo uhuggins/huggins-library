@@ -10,9 +10,16 @@ completeness: a skipped unreadable spine is fine, an invented book is not.
 
 ## Procedure
 
-1. **List the inbox.** `ls photos/inbox/`. If empty, tell the user how to add
-   photos (upload to `photos/inbox/` on GitHub, or drop files there locally) and
+1. **List the inbox.** First pull anything submitted through the website:
+   `node scripts/fetch-submissions.mjs --pull` (lists and downloads from the
+   Tigris bucket into `photos/inbox/`; it is safe to run with nothing waiting).
+   Then `ls photos/inbox/`. If still empty, tell the user how to add photos
+   (the site's "Add your shelf" form, or drop files in `photos/inbox/`) and
    stop.
+
+   After the books are catalogued and the photos archived, run
+   `node scripts/fetch-submissions.mjs --archive` so the bucket inbox does not
+   re-deliver the same photos next time.
 
 2. **Read each photo with the Read tool** (it renders images). For every spine
    you can identify, note: title, author, publisher if visible, and the spine's

@@ -3,4 +3,8 @@ dist/
 .vercel/
 .DS_Store
 *.log
-.vercel
+
+# Local credentials, never committed
+.env
+.env.local
+.env.*.local

@@ -38,32 +38,56 @@ verification bar; keep `npm run build` green.
 
 ## Adding books, mechanically
 
-Photos land in `photos/inbox/` by one of three routes:
+Photos reach the cataloguing step by one of two routes:
 
 1. **The website form** ("Add your shelf"): anyone submits a name and photos.
-   The browser shrinks each photo to a JPEG, `api/submit-shelf.ts` (a Vercel
-   function) validates it and commits it to the inbox as
-   `name--<timestamp>.jpg`. The name prefix marks a guest shelf: the
-   cataloguing pass gives it a new shelf number and registers the owner in
-   `SHELF_OWNERS` (`src/lib/collection.ts`).
-2. **GitHub's upload page** for the folder, from any logged-in account.
-3. **Locally**, by dropping files in the folder.
+   The browser shrinks each to a JPEG, asks `api/submit-shelf.ts` for a
+   short-lived presigned URL per photo, and uploads **straight to Tigris
+   object storage** under `inbox/<slug>--<timestamp>-<n>.jpg`. The photo never
+   passes through the site, and the repo stays code-only. The name prefix
+   marks a guest shelf: the cataloguing pass gives it a new shelf number and
+   registers the owner in `SHELF_OWNERS` (`src/lib/collection.ts`).
+2. **Locally**, by dropping files straight into `photos/inbox/`.
 
-Then either run `claude "/add-books"` locally (transcribes spines, appends
-catalog entries, fetches covers, verifies the build, archives photos to
-`photos/shelves/`), or let the `Catalog new shelf photos` workflow do the same
-in CI and open a pull request. Nothing reaches the site until that pull
-request is merged, which is the review gate for public submissions.
+To collect submissions:
+
+```sh
+node scripts/fetch-submissions.mjs            # what is waiting
+node scripts/fetch-submissions.mjs --pull     # download into photos/inbox/
+node scripts/fetch-submissions.mjs --archive  # move to done/ once catalogued
+```
+
+Then run `claude "/add-books"`, which transcribes spines, appends catalog
+entries, fetches covers, verifies the build, and archives the photos.
+Nothing reaches the site until the resulting change is reviewed and merged,
+which is the review gate for public submissions.
 
 ### One-time setup for the hosted flow
 
-- **Vercel** → Project → Settings → Environment Variables:
-  `GITHUB_CONTENT_TOKEN` = a fine-grained personal access token scoped to
-  this repository with Contents read/write. Until it exists the form's
-  endpoint answers 503 with a friendly message.
-- **GitHub** → Settings → Secrets and variables → Actions:
-  `ANTHROPIC_API_KEY`, so the workflow can run Claude. Without it the
-  workflow fails early and photos simply wait in the inbox.
+**Vercel** → Project → Settings → Environment Variables (all three, for
+Production):
+
+- `TIGRIS_STORAGE_ACCESS_KEY_ID`
+- `TIGRIS_STORAGE_SECRET_ACCESS_KEY`
+- `TIGRIS_STORAGE_ENDPOINT` = `https://t3.storage.dev`
+
+Optionally `TIGRIS_BUCKET` if the bucket is ever renamed; it defaults to
+`huggins-library-photos`. Until the credentials exist the form's endpoint
+answers 503 with a friendly message.
+
+For local use, the same values live in `.env.local` (gitignored), which
+`scripts/fetch-submissions.mjs` reads automatically.
+
+The bucket is **private** with soft delete enabled, and Tigris permits
+cross-origin PUTs to presigned URLs by default, so no CORS configuration is
+needed.
+
+### Optional: unattended cataloguing
+
+`.github/workflows/add-books.yml` can run the same pass in CI and open a pull
+request, which needs an `ANTHROPIC_API_KEY` repository secret (GitHub →
+Settings → Secrets and variables → Actions). Without it the workflow fails
+early and photos simply wait in the bucket, which is harmless.
 
 ## Deploy
 

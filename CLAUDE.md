@@ -13,6 +13,14 @@ If you were asked to rebuild or port the app, follow `docs/BUILD-SPEC.md`.
 - `npm run dev` — dev server on port 5180 (also in `.claude/launch.json`)
 - `npm run build` — typecheck (`tsc --noEmit`) + production build; run before committing
 - `npm run covers` — Open Library lookup; regenerates `src/data/covers.json`
+- `node scripts/fetch-submissions.mjs [--pull|--archive]` — shelf photos
+  submitted through the website, which live in Tigris object storage under
+  `inbox/`. Pull them into `photos/inbox/` before cataloguing; archive them
+  after, so they are not re-delivered.
+
+Note `tsconfig.json` includes only `src`, so **nothing under `api/` is
+typechecked by `npm run build`**. Keep those files simple and self-contained;
+a mistake there will only surface at runtime on Vercel.
 
 ## Architecture (all under src/)
 

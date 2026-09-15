@@ -1,17 +1,24 @@
-// Receives a shelf photo from the website's "Add to the library" form and
-// commits it to photos/inbox/ in this repo, which triggers the cataloguing
-// workflow. Nothing appears on the site until the resulting pull request is
-// reviewed and merged.
+// Hands the browser a short-lived presigned URL so it can upload a shelf photo
+// straight to Tigris object storage. The photo never passes through this
+// function, so phone-sized images are not a constraint and the repo stays
+// code-only.
 //
-// Requires one Vercel environment variable:
-//   GITHUB_CONTENT_TOKEN  a fine-grained personal access token with
-//                         Contents read/write on uhuggins/huggins-library
+// Requires three Vercel environment variables:
+//   TIGRIS_STORAGE_ACCESS_KEY_ID
+//   TIGRIS_STORAGE_SECRET_ACCESS_KEY
+//   TIGRIS_STORAGE_ENDPOINT        (optional, defaults to https://t3.storage.dev)
+//   TIGRIS_BUCKET                  (optional, defaults to huggins-library-photos)
 //
-// Without the token the endpoint answers 503 and the form explains that the
+// Without credentials the endpoint answers 503 and the form explains that the
 // postbox is not connected yet.
+//
+// Uploads land under inbox/, named so the submitter's name survives:
+//   inbox/<slug>--<timestamp>-<n>.jpg
+// The cataloguing pass reads that prefix to build a shelf owned by that person.
 
-const REPO = 'uhuggins/huggins-library'
-const MAX_BYTES = 4_000_000
+import { BUCKET, credentials, presign } from './_tigris'
+
+const MAX_PHOTOS = 12
 
 const slugify = (name: string): string =>
   name
@@ -28,57 +35,38 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ error: 'POST only' })
   }
 
-  const { name, photo, hp } = req.body ?? {}
+  const { name, count, hp } = req.body ?? {}
 
-  // Honeypot field: bots that fill it get a quiet yes and nothing happens.
-  if (hp) return res.status(200).json({ ok: true })
+  // Honeypot: bots that fill the hidden field get a quiet yes and nothing happens.
+  if (hp) return res.status(200).json({ uploads: [] })
 
   if (typeof name !== 'string' || name.trim().length < 1 || name.trim().length > 40) {
     return res.status(400).json({ error: 'Add a name between 1 and 40 characters.' })
   }
-  if (typeof photo !== 'string' || !photo.startsWith('data:image/jpeg;base64,')) {
-    return res.status(400).json({ error: 'The photo did not arrive as a JPEG.' })
+
+  const n = Number(count)
+  if (!Number.isInteger(n) || n < 1 || n > MAX_PHOTOS) {
+    return res.status(400).json({ error: `Send between 1 and ${MAX_PHOTOS} photos at a time.` })
   }
 
-  const b64 = photo.slice('data:image/jpeg;base64,'.length)
-  const approxBytes = Math.floor(b64.length * 0.75)
-  if (approxBytes > MAX_BYTES) {
-    return res.status(413).json({ error: 'That photo is too large even after shrinking. Try a closer crop.' })
-  }
-  const head = Buffer.from(b64.slice(0, 12), 'base64')
-  if (head[0] !== 0xff || head[1] !== 0xd8) {
-    return res.status(400).json({ error: 'The file does not look like a JPEG.' })
-  }
-
-  const token = process.env.GITHUB_CONTENT_TOKEN
-  if (!token) {
+  const creds = credentials()
+  if (!creds) {
     return res.status(503).json({
       error: 'The postbox is not connected yet. Tell the librarian, who has one setting left to flip.',
     })
   }
 
-  const cleanName = name.trim()
-  const path = `photos/inbox/${slugify(cleanName)}--${Date.now()}.jpg`
+  const stamp = Date.now()
+  const slug = slugify(name.trim())
 
-  const gh = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
-    method: 'PUT',
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-      'User-Agent': 'huggins-library-postbox',
-    },
-    body: JSON.stringify({
-      message: `Shelf photo from ${cleanName}, via the website`,
-      content: b64,
-    }),
-  })
-
-  if (!gh.ok) {
-    const detail = await gh.text().catch(() => '')
-    console.error('GitHub commit failed', gh.status, detail.slice(0, 300))
-    return res.status(502).json({ error: 'The inbox did not accept the photo. Try again in a minute.' })
+  try {
+    const uploads = Array.from({ length: n }, (_, i) => {
+      const key = `inbox/${slug}--${stamp}-${i + 1}.jpg`
+      return { key, url: presign({ method: 'PUT', key, expiresIn: 900, ...creds }) }
+    })
+    return res.status(200).json({ uploads, bucket: BUCKET })
+  } catch (err) {
+    console.error('presign failed', err)
+    return res.status(500).json({ error: 'Could not open the postbox. Try again in a minute.' })
   }
-
-  return res.status(200).json({ ok: true })
 }
